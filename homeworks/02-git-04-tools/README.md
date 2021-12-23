@@ -15,12 +15,12 @@
    dd01a3507 Update CHANGELOG.md<br />
    225466bc3 Cleanup after v0.12.23 release<br />
    85024d310 (tag: v0.12.23) v0.12.23<br />
-1. to add <br />
+1. command:  git log -S'func providerSource' <br />
+   8c928e835 main: Consult local directories as potential mirrors of providers
 1. command: git log -SglobalPluginDirs --oneline<br />
    35a058fb3 main: configure credentials from the CLI config file<br />
    c0b176109 prevent log output during init<br />
    8364383c3 Push plugin discovery down into command package
-<<<<<<< HEAD
 1. command: git log -SsynchronizedWriters<br />
    Author: Martin Atkins <mart@degeneration.co.uk>
 
