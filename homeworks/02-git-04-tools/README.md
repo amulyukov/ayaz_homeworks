@@ -20,7 +20,7 @@
    35a058fb3 main: configure credentials from the CLI config file<br />
    c0b176109 prevent log output during init<br />
    8364383c3 Push plugin discovery down into command package
-1. command: git log -SsynchronizedWriters<br />
+1. command: git log -SsynchronizedWriters<br />,
    Author: Martin Atkins <mart@degeneration.co.uk>
 
  
