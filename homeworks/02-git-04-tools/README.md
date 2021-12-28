@@ -1,6 +1,6 @@
 # Домашнее задание к занятию «2.4. Инструменты Git»
 1. command: git show aefea <br />commit aefead2207ef7e2aa5dc81a34aedf0cad4c32545 comment Update CHANGELOG.md
-1. command: git show 85024d3 v0.12.23<br />
+1. command: git show 85024d3<br /> v0.12.23
 1. command: git show b8d720^ and git show b8d720^2<br /> 
    2 родителя 56cd7859e05c36c06b56d013b55a252d0bb7e158 and 9ea88f22fc6269854151c571162c5bcf958bee2b
 1. command: git checkout v0.12.24 and git log --oneline <br />
