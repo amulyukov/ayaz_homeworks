@@ -8,26 +8,28 @@
 ![vagrant up](img/4.3.jpg)
 ![vagrant suspend](img/4.4.jpg)
 
-4. Характеристики VM 
+5. Характеристики VM 
 
 ![](img/5.1.jpg)
 ![](img/5.2.jpg)
 ![](img/5.3.jpg)
 ![](img/5.4.jpg)
 
-4. Добавил оперативной памяти и CPU
+6. Добавил оперативной памяти и CPU
 
 ![](img/6.jpg)
 
-4. Vagrant ssh
+7. Vagrant ssh
 
 ![vagrant ssh](img/7.jpg)
 
-4. man bash
+8. man bash
 
 * HISTSIZE и HISTFILESIZE
 ![histsize](img/8.jpg)
 * 
 ignorespace — не сохранять строки начинающиеся с символа <пробел>  
 ignoredups — не сохранять строки, совпадающие с последней выполненной командой  
-ignoreboth — использовать обе опции ‘ignorespace’ и ‘ignoredups’  
+ignoreboth — использовать обе опции ‘ignorespace’ и ‘ignoredups’ 
+
+9.  
