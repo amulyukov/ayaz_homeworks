@@ -1,6 +1,4 @@
-4. 
-
-* Выполнил инициализацию vagrant init и изменил Vagrantfile 
+4. Выполнил инициализацию vagrant init и изменил Vagrantfile 
 
 ![vagrant init](img/4.1.jpg)
 ![Vagrantfile](img/4.2.jpg)
@@ -10,7 +8,7 @@
 ![vagrant up](img/4.3.jpg)
 ![vagrant suspend](img/4.4.jpg)
 
-4. 
+4. Характеристики VM 
 
 ![](img/5.1.jpg)
 ![](img/5.2.jpg)
