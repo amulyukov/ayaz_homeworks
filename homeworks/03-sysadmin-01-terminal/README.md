@@ -26,13 +26,15 @@
 8. man bash
 
 * HISTSIZE и HISTFILESIZE
-![histsize](img/8.jpg)
+![histsize](img/8.1.jpg)
 * 
 ignorespace — не сохранять строки начинающиеся с символа <пробел>  
 ignoredups — не сохранять строки, совпадающие с последней выполненной командой  
 ignoreboth — использовать обе опции ‘ignorespace’ и ‘ignoredups’ 
 
 9. 
+
+![сценарий использования {}](img/9.jpg)
 
 10. Для создания 100000 файлов написал команду touch file--{0..100000} 
 
