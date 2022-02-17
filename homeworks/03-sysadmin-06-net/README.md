@@ -14,5 +14,5 @@ ns2.zdns.google.<br/>
 ns3.zdns.google.<br/>
 ns4.zdns.google.<br/>
 ns1.zdns.google.<br/>
-А записи: 8.8.4.4 и 8.8.8.8<br/>
-1.<br/>![](img/8.jpg)
+А записи: 8.8.4.4 и 8.8.8.8
+1. <br/>![](img/8.jpg)
