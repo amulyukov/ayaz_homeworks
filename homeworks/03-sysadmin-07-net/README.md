@@ -2,9 +2,9 @@
 <br/>![](img/1.2.jpg)
 1. Протокол LLDP. Пакет lldpd, команда lldpctl
 1. Технология VLAN. Пакет VLAN. modprobe 8021q  - установит модуль 8021q в ядро линукс. 
-Команда vconfig add 202 добавил vlan. 
-Отредактировал файл /etc/netplan/<inteface> назначил ip vlan интерфейсу. 
-Так же создал vlan через config 
+ Команда vconfig add 202 добавил vlan. 
+ Отредактировал файл /etc/netplan/<inteface> назначил ip vlan интерфейсу. 
+ Так же создал vlan через config 
 <br/>![](img/3.1.jpg)
 <br/>![](img/3.2.jpg)
 1. Типы агрегаций в Linux(bond-mode):
