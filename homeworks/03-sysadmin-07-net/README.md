@@ -1,4 +1,4 @@
-1. <br/>![](img/1.jpg)
+1. <br/>![](img/1.1.jpg)
 <br/>![](img/1.2.jpg)
 1. Протокол LLDP. Пакет lldpd, команда lldpctl
 1. Технология VLAN. Пакет VLAN. modprobe 8021q  - установит модуль 8021q в ядро линукс. 
