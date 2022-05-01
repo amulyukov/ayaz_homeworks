@@ -169,7 +169,7 @@ vault write pki_int/issue/example-dot-com common_name="test.example.com" ttl="24
 
 */1 * * * *  root /home/sovar/update_cert.sh - выполнение скрипта от root каждую минуту
 
-* 23 28 * * root  /home/sovar/update_cert.sh - выполнение скрипта от root каждый 28 день месяца в 23:00
+\* 23 28 * * root  /home/sovar/update_cert.sh - выполнение скрипта от root каждый 28 день месяца в 23:00
 
 ![nginx web site](img/6.2.jpg)
 ![nginx web site](img/6.3.jpg)
