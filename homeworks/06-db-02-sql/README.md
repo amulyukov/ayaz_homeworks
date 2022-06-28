@@ -77,44 +77,45 @@ postgres=# CREATE ROLE "test-admin-user" SUPERUSER NOCREATEDB NOCREATEROLE NOINH
 CREATE ROLE
 postgres=# GRANT ALL ON ALL TABLES IN SCHEMA "public" TO "test-admin-user";
 GRANT
-postgres=# CREATE TABLE orders
-postgres-# (
-postgres(# id integer,
-postgres(# name text,
-postgres(# price integer,
-postgres(# PRIMARY KEY (id)
-postgres(# );
+test_db=# \c test_db
+test_db=# CREATE TABLE orders
+test_db-# (
+test_db(# id integer,
+test_db(# name text,
+test_db(# price integer,
+test_db(# PRIMARY KEY (id)
+test_db(# );
 CREATE TABLE
-postgres=# CREATE TABLE clients
-postgres-# (
-postgres(# id integer PRIMARY KEY,
-postgres(# lastname text,
-postgres(# country text,
-postgres(# zakaz integer,
-postgres(# FOREIGN KEY (zakaz) REFERENCES orders (id)
-postgres(# );
+test_db=# CREATE TABLE clients
+test_db-# (
+test_db(# id integer PRIMARY KEY,
+test_db(# lastname text,
+test_db(# country text,
+test_db(# zakaz integer,
+test_db(# FOREIGN KEY (zakaz) REFERENCES orders (id)
+test_db(# );
 CREATE TABLE
-postgres=# CREATE ROLE "test-simple-user" NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT LOGIN;
+test_db=# CREATE ROLE "test-simple-user" NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT LOGIN;
 CREATE ROLE
-postgres=# GRANT SELECT ON TABLE public.clients TO "test-simple-user";
+test_db=# GRANT SELECT ON TABLE public.clients TO "test-simple-user";
 GRANT
-postgres=# GRANT INSERT ON TABLE public.clients TO "test-simple-user";
+test_db=# GRANT INSERT ON TABLE public.clients TO "test-simple-user";
 GRANT
-postgres=# GRANT UPDATE ON TABLE public.clients TO "test-simple-user";
+test_db=# GRANT UPDATE ON TABLE public.clients TO "test-simple-user";
 GRANT
-postgres=# GRANT DELETE ON TABLE public.clients TO "test-simple-user";
+test_db=# GRANT DELETE ON TABLE public.clients TO "test-simple-user";
 GRANT
-postgres=# GRANT SELECT ON TABLE public.orders TO "test-simple-user";
+test_db=# GRANT SELECT ON TABLE public.orders TO "test-simple-user";
 GRANT
-postgres=# GRANT INSERT ON TABLE public.orders TO "test-simple-user";
+test_db=# GRANT INSERT ON TABLE public.orders TO "test-simple-user";
 GRANT
-postgres=# GRANT UPDATE ON TABLE public.orders TO "test-simple-user";
+test_db=# GRANT UPDATE ON TABLE public.orders TO "test-simple-user";
 GRANT
-postgres=# GRANT DELETE ON TABLE public.orders TO "test-simple-user";
+test_db=# GRANT DELETE ON TABLE public.orders TO "test-simple-user";
 GRANT
-postgres=# CREATE INDEX country_index ON clients(country);
+test_db=# CREATE INDEX country_index ON clients(country);
 CREATE INDEX
-postgres=# \l
+test_db=# \l
                                  List of databases
    Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges
 -----------+----------+----------+------------+------------+-----------------------
@@ -125,7 +126,7 @@ postgres=# \l
            |          |          |            |            | postgres=CTc/postgres
  test_db   | postgres | UTF8     | en_US.utf8 | en_US.utf8 |
 (4 rows)
-postgres=# \d orders
+test_db=# \d orders
                Table "public.orders"
  Column |  Type   | Collation | Nullable | Default
 --------+---------+-----------+----------+---------
@@ -137,7 +138,7 @@ Indexes:
 Referenced by:
     TABLE "clients" CONSTRAINT "clients_zakaz_fkey" FOREIGN KEY (zakaz) REFERENCES orders(id)
 
-postgres=# \d clients
+test_db=# \d clients
                Table "public.clients"
   Column  |  Type   | Collation | Nullable | Default
 ----------+---------+-----------+----------+---------
@@ -179,8 +180,6 @@ grantee in ('test-admin-user', 'test-simple-user');
  clients    | test-admin-user  | REFERENCES
  clients    | test-admin-user  | TRIGGER
 (22 rows)
-
-postgres=#
 ```
 
 ## Задача 3
@@ -215,20 +214,20 @@ postgres=#
 	
 
 ##Решение
-```
-postgres=# insert into orders VALUES (1, 'Шоколад', 10), (2, 'Принтер', 3000),
+```bash
+test_db=# insert into orders VALUES (1, 'Шоколад', 10), (2, 'Принтер', 3000),
 (3, 'Книга', 500), (4, 'Монитор', 7000), (5, 'Гитара', 4000);
 INSERT 0 5
 postgres=# insert into clients VALUES (1, 'Иванов Иван Иванович', 'USA'), (2, 'Петров Петр Петрович', 'Canada'), 
 (3, 'Иоганн Себастьян Бах', 'Japan'), (4, 'Ронни Джеймс Дио', 'Russia'), (5, 'Ritchie Blackmore', 'Russia');
 INSERT 0 5
-postgres=# select count (*) from orders;
+test_db=# select count (*) from orders;
  count
 -------
      5
 (1 row)
 
-postgres=# select count (*) from clients;
+test_db=# select count (*) from clients;
  count
 -------
      5
@@ -255,15 +254,14 @@ postgres=# select count (*) from clients;
 
 
 ##Решение
-
-```
-postgres=# update clients set zakaz = 3 where id = 1;
+```bash
+test_db=# update clients set zakaz = 3 where id = 1;
 UPDATE 1
-postgres=# update clients set zakaz = 4 where id = 2;
+test_db=# update clients set zakaz = 4 where id = 2;
 UPDATE 1
-postgres=# update clients set zakaz = 5 where id = 3;
+test_db=# update clients set zakaz = 5 where id = 3;
 UPDATE 1
-postgres=# select * from clients c where c.zakaz is not null;
+test_db=# select * from clients c where c.zakaz is not null;
  id |       lastname       | country | zakaz
 ----+----------------------+---------+-------
   1 | Иванов Иван Иванович | USA     |     3
@@ -284,12 +282,10 @@ postgres=# select * from clients c where c.zakaz is not null;
 
 
 ##Решение
-
 EXPLAIN - позволяет нам дать служебную информацию о запросе к БД, 
 в том числе время на выполнение запроса, что при оптимизации работы БД является очень полезной информацией.
-
 ```bash
-postgres=# explain select * from clients c where c.zakaz is not null;
+test_db=# explain select * from clients c where c.zakaz is not null;
                          QUERY PLAN
 -------------------------------------------------------------
  Seq Scan on clients c  (cost=0.00..18.10 rows=806 width=72)
@@ -313,7 +309,6 @@ postgres=# explain select * from clients c where c.zakaz is not null;
 
 
 ##Решение
-
 ```bash
 ayaz@netology-coursework:~$ docker run --rm --name pg-docker-new -e POSTGRES_PASSWORD=postgres -tid -p 5433:5432 \
 -v pg_data_new:/var/lib/postgresql/data -v pg_backup:/var/lib/postgresql postgres:12
@@ -372,7 +367,6 @@ GRANT
 GRANT
 GRANT
 GRANT
-
 ```
 
 ![](img/db.jpg)
