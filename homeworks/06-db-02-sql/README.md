@@ -212,8 +212,7 @@ grantee in ('test-admin-user', 'test-simple-user');
     - запросы 
     - результаты их выполнения.
 	
-
-##Решение
+## Решение
 ```bash
 test_db=# insert into orders VALUES (1, 'Шоколад', 10), (2, 'Принтер', 3000),
 (3, 'Книга', 500), (4, 'Монитор', 7000), (5, 'Гитара', 4000);
@@ -253,7 +252,7 @@ test_db=# select count (*) from clients;
 Подсказк - используйте директиву `UPDATE`.
 
 
-##Решение
+## Решение
 ```bash
 test_db=# update clients set zakaz = 3 where id = 1;
 UPDATE 1
@@ -281,7 +280,7 @@ test_db=# select * from clients c where c.zakaz is not null;
 Приведите получившийся результат и объясните что значат полученные значения.
 
 
-##Решение
+## Решение
 EXPLAIN - позволяет нам дать служебную информацию о запросе к БД, 
 в том числе время на выполнение запроса, что при оптимизации работы БД является очень полезной информацией.
 ```bash
@@ -308,7 +307,7 @@ test_db=# explain select * from clients c where c.zakaz is not null;
 Приведите список операций, который вы применяли для бэкапа данных и восстановления. 
 
 
-##Решение
+## Решение
 ```bash
 ayaz@netology-coursework:~$ docker run --rm --name pg-docker-new -e POSTGRES_PASSWORD=postgres -tid -p 5433:5432 \
 -v pg_data_new:/var/lib/postgresql/data -v pg_backup:/var/lib/postgresql postgres:12
