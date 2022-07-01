@@ -25,7 +25,7 @@
 В следующих заданиях мы будем продолжать работу с данным контейнером.
 
 ## Решение
-```
+```bash
 ayaz@netology-coursework:~$ docker pull mysql:8
 8: Pulling from library/mysql
 824b15f81d65: Pull complete
@@ -131,7 +131,7 @@ mysql> select count(*) from orders where price >300;
 **приведите в ответе к задаче**.
 
 ## Решение
-```
+```bash
 mysql> create user 'test'@'localhost'
     ->     identified with mysql_native_password by 'test-pass'
     ->     with max_queries_per_hour 100
@@ -167,7 +167,7 @@ mysql> select * from INFORMATION_SCHEMA.USER_ATTRIBUTES where user = 'test';
 - на `InnoDB`
 
 ## Решение
-```
+```bash
 mysql> SET profiling = 1;
 Query OK, 0 rows affected, 1 warning (0.00 sec)
 
@@ -212,7 +212,7 @@ mysql> show profiles;
 Приведите в ответе измененный файл `my.cnf`.
 
 ## Решения
-```
+```bash
 [mysqld]
 pid-file        = /var/run/mysqld/mysqld.pid
 socket          = /var/run/mysqld/mysqld.sock
