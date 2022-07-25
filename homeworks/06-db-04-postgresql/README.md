@@ -16,7 +16,7 @@
 - выхода из psql
 
 ## Решение
-'''bash
+```bash
 ayaz@netology-coursework:~/virt-homeworks/06-db-04-postgresql$ docker pull postgres:13
 13: Pulling from library/postgres
 461246efe0a7: Pull complete
@@ -88,7 +88,7 @@ Tablespace: "pg_global"
 
 postgres=# \q
 ayaz@netology-coursework:~/virt-homeworks/06-db-04-postgresql$
-'''
+```
 
 ## Задача 2
 
@@ -108,7 +108,7 @@ ayaz@netology-coursework:~/virt-homeworks/06-db-04-postgresql$
 **Приведите в ответе** команду, которую вы использовали для вычисления и полученный результат.
 
 ## Решение
-'''bash
+```bash
 postgres=# CREATE DATABASE test_database;
 CREATE DATABASE
 ayaz@netology-coursework:~/virt-homeworks/06-db-04-postgresql$ psql -h localhost -p 5432 -U postgres -f ./test_data/test_dump.sql test_database
@@ -162,8 +162,7 @@ test_database=# select avg_width from pg_stats where tablename='orders';
          4
 (3 rows)
 
-
-'''
+```
 
 ## Задача 3
 
@@ -180,7 +179,7 @@ test_database=# select avg_width from pg_stats where tablename='orders';
 
 Да, можно было бы исключить "ручное" разбиение, необходимо было изночально определить тип на момент создания таблицы - partitioned table
 
-'''bash
+```bash
 test_database=# create table orders_new (
 test_database(#         id integer NOT NULL,
 test_database(#         title varchar(80) NOT NULL,
@@ -223,9 +222,7 @@ test_database=# select * from orders_more;
   7 | Me and my bash-pet |   499
   8 | Dbiezdmin          |   501
 (4 rows)
-
-
-'''
+```
 
 ## Задача 4
 
@@ -234,9 +231,9 @@ test_database=# select * from orders_more;
 Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?
 
 ## Решение
-'''bash
+```bash
 root@bd8637697ee4:/# pg_dump -h localhost -p 5432 -U postgres -d test_database > /var/lib/postgresql/data/
-'''
+```
 Для обеспечения уникальности можно добавить индекс, либо UNIQUE свойство переменной.
 
 ---
