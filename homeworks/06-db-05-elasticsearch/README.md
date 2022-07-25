@@ -31,7 +31,7 @@
 
 Далее мы будем работать с данным экземпляром elasticsearch.
 
-##Решение
+## Решение
 
 Dockerfile
 
@@ -332,7 +332,7 @@ Enter host password for user 'elastic':
 При проектировании кластера elasticsearch нужно корректно рассчитывать количество реплик и шард,
 иначе возможна потеря данных индексов, вплоть до полной, при деградации системы.
 
-##Решение
+## Решение
 
 ```bash
 [elasticsearch@6ebcdfe2977c /]$ curl --cacert /elasticsearch-8.3.2/config/certs/http_ca.crt -u elastic -X PUT https://localhost:9200/ind-1 -H 'Content-Type: application/json' -d '{ "settings": { "index": { "number_of_shards": 1, "number_of_replicas": 0 }}}'
@@ -409,7 +409,7 @@ Enter host password for user 'elastic':
 Подсказки:
 - возможно вам понадобится доработать `elasticsearch.yml` в части директивы `path.repo` и перезапустить `elasticsearch`
 
-##Решение
+## Решение
 
 В elasticsearch.yml была добавлена директива path.repo: /elasticsearch-8.3.2/snapshots
 
