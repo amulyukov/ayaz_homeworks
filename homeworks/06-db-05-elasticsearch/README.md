@@ -32,6 +32,7 @@
 Далее мы будем работать с данным экземпляром elasticsearch.
 
 ##Решение
+
 Dockerfile
 
 ```
@@ -332,6 +333,7 @@ Enter host password for user 'elastic':
 иначе возможна потеря данных индексов, вплоть до полной, при деградации системы.
 
 ##Решение
+
 ```bash
 [elasticsearch@6ebcdfe2977c /]$ curl --cacert /elasticsearch-8.3.2/config/certs/http_ca.crt -u elastic -X PUT https://localhost:9200/ind-1 -H 'Content-Type: application/json' -d '{ "settings": { "index": { "number_of_shards": 1, "number_of_replicas": 0 }}}'
 Enter host password for user 'elastic':
