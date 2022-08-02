@@ -173,7 +173,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ![](img/3.png) 
 
 1. Собрать образ мы можем так же при помощи Packer
-2. Ссылка на исходную конифгурацию терраформа
+2. Ссылка на исходную конифгурацию терраформа https://github.com/amulyukov/devops-netology/blob/main/homeworks/02-git-01-vcs/terraform/main.tf
 ---
 
 ### Как cдавать задание
