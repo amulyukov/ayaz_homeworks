@@ -171,6 +171,9 @@ yandex_compute_image.ubuntu2004img: Creation complete after 14s [id=fd8n97k2pd61
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 ![](img/3.png) 
+
+1. Собрать образ мы можем так же при помощи Packer
+2. Ссылка на исходную конифгурацию терраформа
 ---
 
 ### Как cдавать задание
