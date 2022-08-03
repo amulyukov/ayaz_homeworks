@@ -11,3 +11,9 @@
 ## 5 Файлы override.tf, override.tf.json и в которых встречаются в названии *_override.tf, *_override.tf.json
 
 ## 6 Файлы .terraformrc и terraform.rc
+
+# Infrastructure As Code
+
+> Для начала работы установите следующие env переменные, получить их можно при установке yandex cloud cli
+
+- export TF_VAR_yc_token= тот же токен что при установке cli
