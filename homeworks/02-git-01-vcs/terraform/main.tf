@@ -15,6 +15,6 @@ provider "yandex" {
 }
 
 resource "yandex_compute_image" "ubuntu2004img" {
-  name       = "ubuntu-20-04-lts-v20211220"
-  source_image = "f2eds5lpj5spivf93dkt"
+  name       = "ubuntu-20-04-lts-v20210811a"
+  source_image = "fd8fbgvdt6mktnprvo89"
 }
