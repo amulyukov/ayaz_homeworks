@@ -12,7 +12,7 @@ backend "s3" {
     region     = "ru-central1"
     key        = "prod/terraform.tfstate"
     access_key = "YCAJEac1SUI_TENum6cmkUXCo"
-    secret_key = "git status"
+    secret_key = ""
 
     skip_region_validation      = true
     skip_credentials_validation = true
