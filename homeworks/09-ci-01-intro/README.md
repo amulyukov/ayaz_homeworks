@@ -43,6 +43,8 @@
 
 ![](img/7.png)
 
+[Ayaz bug workflow](https://github.com/amulyukov/devops-netology/blob/main/homeworks/09-ci-01-intro/Ayaz%20bug%20workflow.xml)
+[Ayaz tasks workflow](https://github.com/amulyukov/devops-netology/blob/main/homeworks/09-ci-01-intro/Ayaz%20tasks%20workflow.xml)
 
 ---
 
