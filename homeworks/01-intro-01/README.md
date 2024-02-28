@@ -5,7 +5,7 @@
 ![image](https://github.com/amulyukov/ayaz_homeworks/blob/main/homeworks/01-intro-01/img/4.jpg)<br/>
 ![image](https://github.com/amulyukov/ayaz_homeworks/blob/main/homeworks/01-intro-01/img/5.jpg)<br/>
 # задание 2
-### 1 этап.
+### 1 этап..
 Погружение команды в бизнес-контекст. Коммуникация  Клиент - Менеджеры
 ### 2 этап 
 Сбор и анализ требований. Клиент - Менеджеры - ДевОпс 
